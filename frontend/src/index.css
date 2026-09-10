@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #05070D;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.04) 0%, transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(255, 43, 214, 0.03) 0%, transparent 50%);
+    color: #EAF7FF;
+  }
+}
+
+/* Cyberpunk Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #05070D;
+}
+::-webkit-scrollbar-thumb {
+  background: #101827;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Custom HUD Corner Brackets Component */
+.hud-corner-brackets {
+  position: relative;
+}
+.hud-corner-brackets::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #00E5FF;
+  border-left: 2px solid #00E5FF;
+  pointer-events: none;
+}
+.hud-corner-brackets::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #00E5FF;
+  border-right: 2px solid #00E5FF;
+  pointer-events: none;
+}
+
+/* Glowing text helpers */
+.glow-text-cyan {
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+}
+.glow-text-magenta {
+  text-shadow: 0 0 10px rgba(255, 43, 214, 0.6);
+}
+
+/* Leaflet Dark Map Tile Custom Styling */
+.leaflet-container {
+  background-color: #0B101A !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+.leaflet-popup-content-wrapper {
+  background: #0B101A !important;
+  color: #EAF7FF !important;
+  border: 1px solid #00E5FF !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3) !important;
+}
+.leaflet-popup-tip {
+  background: #0B101A !important;
+  border: 1px solid #00E5FF !important;
+}
